@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    dd(7777);
-    return view('welcome');
+Route::get('/dashboard', function () {
+
 });
 
 Route::get('/test', function () {
