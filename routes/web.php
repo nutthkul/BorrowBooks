@@ -21,3 +21,6 @@ Route::get('/addborrow' , 'BorrowController@addBorrow') -> name('lib.add.borrow'
 Route::get('/time', function() {
     dd('time');
 });
+Route::get('/som', function() {
+    dd('Som');
+});
