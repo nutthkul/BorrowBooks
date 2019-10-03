@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/addborrow' , 'BorrowController@addBorrow') -> name('lib.add.borrow');
+Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
 
 
 Route::get('/time', function() {

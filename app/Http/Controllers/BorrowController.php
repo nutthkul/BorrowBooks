@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class BorrowController extends Controller
 {
-    public function addBorrow() {
-        dd(1);
+    public function borrowPage() {
+        return view('borrow.borrowpage');
     }
 }
