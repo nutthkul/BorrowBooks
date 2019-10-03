@@ -15,3 +15,7 @@ Route::get('/', function () {
     dd(7777);
     return view('welcome');
 });
+
+Route::get('/time', function() {
+    dd('time');
+});
