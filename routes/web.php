@@ -11,23 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-<<<<<<< HEAD
-Route::get('/test', function () {
-    dd(1);
-    return view('welcome');
-});
-=======
 Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
 
-
-Route::get('/time', function() {
-    dd('time');
-});
-Route::get('/som', function() {
-    dd('Som');
-});
->>>>>>> #10
