@@ -15,11 +15,9 @@
 
 Route::get('/' , 'BookController@index')->name('book.index');
 
-<<<<<<< HEAD
-Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
-=======
-// ###################### Borrow Route #########################
->>>>>>> #13-CreateDefaultRoute
+
+#Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
+#Route::post('/add', 'BorrowController@borrower') -> name('add.borrow');
 
 Route::name('borrow.')->group(function() {
 
@@ -30,11 +28,11 @@ Route::name('borrow.')->group(function() {
     Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
 
 });
-<<<<<<< HEAD
+
 Route::get('/som', function() {
     dd('Som');
-});
-=======
+}) -> name('test');
+
 // ###################### Return Route ########################
 
 
@@ -69,5 +67,3 @@ Route::name('librarian.')->group(function() {
 });
 
 // ###################### XXXX Route ##########################
-
->>>>>>> #13-CreateDefaultRoute

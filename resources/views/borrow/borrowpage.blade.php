@@ -18,18 +18,18 @@
             <h1><strong>Add New Borrower</strong></h1>
         </div>
     </div>
-   
+    
     <div class="row justify-content-center">
         <div class="col-6">
-            <form>
+            <form action={{ Route('borrow.create')}} method="post">
               @csrf
                 <div class="form-group">
                     <label for="name">Book ID</label>
-                    <input type="text" class="form-control" placeholder="Book ID" name="name">
+                    <input type="text" class="form-control" placeholder="Book ID" name="book_id">
                 </div>
                 <div class="form-group">
                     <label for="text">Lib ID</label>
-                    <input type="text" class="form-control" placeholder="Lib ID" name="name">
+                    <input type="text" class="form-control" placeholder="Lib ID" name="lib_id">
                 </div>
 
                 <div class="form-group">
@@ -46,6 +46,7 @@
             </form>
         </div>
     </div>
+
 </div>
 </body>
 </html>
