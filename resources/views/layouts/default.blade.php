@@ -9,14 +9,14 @@
     </header>
 {{-- #####################Content###################### --}}
     <div class="container">
-        <div id="main" class="row">
+        <div id="main" class="row" style="padding-top: 50px; padding-bottom: 50px;">
 
                 @yield('content')
 
         </div>
     </div>
 {{-- ################################################# --}}
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50" >
         @include('includes.footer')
     </footer>
     <!-- Optional JavaScript -->
