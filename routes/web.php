@@ -11,10 +11,10 @@
 |
 */
 
-// ##################### Dashboard Route ########################
+Route::get('/default' , 'ReturnController@defaultPage')->name('default');
 
-Route::get('/' , 'BookController@index')->name('book.index');
 
+<<<<<<< HEAD
 // ###################### Book Route #########################
 
 Route::name('book.')->group(function() {
@@ -35,12 +35,20 @@ Route::name('borrow.')->group(function() {
     Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
     Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
     Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
+=======
+Route::get('/dashboard', function () {
+>>>>>>> #16-CreateLayouts
 
 });
 // ###################### Return Route ########################
 
+<<<<<<< HEAD
 <<<<<<<<< Temporary merge branch 1
 Route::get('/addborrow' , 'BorrowController@addBorrow') -> name('lib.add.borrow');
+=======
+
+Route::name('return.')->group(function() {
+>>>>>>> #16-CreateLayouts
 
 
 Route::get('/time', function() {
@@ -57,3 +65,12 @@ Route::get('/test', function () {
 
 // ###################### XXXX Route ##########################
 
+<<<<<<< HEAD
+=======
+
+Route::get('/test', function () {
+    dd(1);
+    return view('welcome');
+});
+
+>>>>>>> #16-CreateLayouts
