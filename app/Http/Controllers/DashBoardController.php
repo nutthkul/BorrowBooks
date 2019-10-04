@@ -9,6 +9,6 @@ class DashBoardController extends Controller
     public function librarianCanSeeBorrow()
     {
         $books = Book::all();
-        return view('book.index',compact('books'));
+        return view('borrow.index',compact('books'));
     }
 }
