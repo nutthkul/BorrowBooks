@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/default' , 'ReturnController@defaultPage')->name('default');
+
 // ##################### Dashboard Route ########################
 
 Route::get('/' , 'BookController@index')->name('book.index');
@@ -42,7 +44,6 @@ Route::name('return.')->group(function() {
     Route::post('/return/edit', 'ReturnController@edit')->name('edit');
 
 });
-
 
 // ###################### Book Route ##########################
 
