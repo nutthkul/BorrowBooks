@@ -10,15 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
 
 Route::get('/default' , 'ReturnController@defaultPage')->name('default');
 
 
 Route::get('/dashboard', function () {
-=======
-// ##################### Dashboard Route ########################
->>>>>>> Version1
 
 });
 // ###################### Return Route ########################
@@ -26,16 +22,8 @@ Route::get('/dashboard', function () {
 
 Route::name('return.')->group(function() {
 
-<<<<<<< HEAD
     Route::get('/return/edit/{id}' , 'ReturnController@editIndex')->name('edit.index');
     Route::post('/return/edit', 'ReturnController@edit')->name('edit');
-=======
-    Route::get('/create', 'BorrowController@createIndex')->name('borrow.create.index');
-    Route::post('/create', 'BorrowController@create')->name('borrow.create');
-    Route::get('/edit/{id}', 'BorrowController@editIndex')->name('borrow.edit.index');
-    Route::post('/edit', 'BorrowController@edit')->name('borrow.edit');
-    Route::get('/delete/{id}', 'BorrowController@deleteIndex')->name('borrow.delete.index');
->>>>>>> Version1
 
 });
 
