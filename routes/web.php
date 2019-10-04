@@ -11,29 +11,16 @@
 |
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Route::get('/dashboard', function () {
 
-});
-
-Route::get('/test', function () {
-    dd(1);
-=======
 Route::get('/', function () {
->>>>>>> #10
     return view('welcome');
 });
 
-<<<<<<< HEAD
-Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
-=======
 // ##################### Dashboard Route ########################
 
 Route::get('/' , 'BookController@index') -> name('book.index');
 
 // ###################### Borrow Route #########################
->>>>>>> #13-CreateDefaultRoute
 
 Route::name('borrow.')->group(function() {
 
@@ -44,11 +31,6 @@ Route::name('borrow.')->group(function() {
     Route::get('/delete/{id}', 'BorrowController@deleteIndex')->name('borrow.delete.index');
 
 });
-<<<<<<< HEAD
-Route::get('/som', function() {
-    dd('Som');
-});
-=======
 // ###################### Return Route ########################
 
 Route::get('/return' , 'ReturnController@returnBookPage') -> name('return.page');
@@ -78,10 +60,9 @@ Route::name('librarian.')->group(function() {
 
 // ###################### XXXX Route ##########################
 
->>>>>>> #13-CreateDefaultRoute
-=======
+
 Route::get('/test', function () {
     dd(1);
     return view('welcome');
 });
->>>>>>> #9-AddBook
+
