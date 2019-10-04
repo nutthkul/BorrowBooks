@@ -14,7 +14,7 @@ class CreateBorrowsTable extends Migration
     public function up()
     {
         Schema::create('borrow', function (Blueprint $table) {
-            $table->bigIncrements('borrow_id');
+            $table->bigIncrements('id');
             $table->timestamps();
             $table->date('borrow_date');
             $table->date('return_date');

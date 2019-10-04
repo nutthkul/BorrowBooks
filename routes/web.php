@@ -13,8 +13,39 @@
 
 Route::get('/default' , 'ReturnController@defaultPage')->name('default');
 
+// ##################### Dashboard Route ########################
 
-// ###################### Book Route #########################
+Route::get('/' , 'BookController@index')->name('book.index');
+
+
+#Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
+#Route::post('/add', 'BorrowController@borrower') -> name('add.borrow');
+
+Route::name('borrow.')->group(function() {
+
+    Route::get('/borrow/create', 'BorrowController@createIndex')->name('create.index');
+    Route::post('/borrow/create', 'BorrowController@create')->name('create');
+    Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
+    Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
+    Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
+
+});
+
+Route::get('/som', function() {
+    return ('index');
+}) -> name('test');
+
+// ###################### Return Route ########################
+
+
+Route::name('return.')->group(function() {
+
+    Route::get('/return/edit/{id}' , 'ReturnController@editIndex')->name('edit.index');
+    Route::post('/return/edit', 'ReturnController@edit')->name('edit');
+
+});
+
+// ###################### Book Route ##########################
 
 Route::name('book.')->group(function() {
     Route::get('/book/index', 'BookController@index')->name('index');
@@ -28,16 +59,4 @@ Route::name('book.')->group(function() {
 
 // ###################### Borrow Route #########################
 
-Route::name('borrow.')->group(function() {
-
-    Route::get('/borrow/create', 'BorrowController@createIndex')->name('create.index');
-    Route::post('/borrow/create', 'BorrowController@create')->name('create');
-    Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
-    Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
-    Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
-
-});
-// ###################### Return Route ########################
-
-
-Route::get('/addborrow' , 'BorrowController@addBorrow') -> name('lib.add.borrow');
+// ###################### XXXX Route ##########################

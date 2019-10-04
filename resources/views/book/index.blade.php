@@ -118,20 +118,18 @@
 
         <div class="col-10 offset-2" align="right">
                 <h1>
-                <a href="{{route('.book.create')}}" class="btn btn-outline-primary"> + Add Book </a>
+                <a href="{{route('book.create')}}" class="btn btn-outline-primary"> + Add Book </a>
                 </h1>
             </div>
            
             <table class="table table-borderless table-dark">
                     <thead>
                             <tr>
-                                    <th scope="col">#</th>
                                     <th scope="col">book id</th>
                                     <th scope="col">Book name</th>
                                     <th scope="col">Type</th>
-                                    <th scope="col">Describe</th>
                                     <th scope="col">Action</th>
-                                    
+                                    <th scope="col">Action</th>
                             </tr>
                     </thead>
                     <tbody>
@@ -140,10 +138,8 @@
                             @foreach($books as $key => $book)
                                 <tr>
                                     <th>{{ $key + 1 }}</th>
-                                    <th>{{ $book->book_id }}</th>
                                     <th>{{ $book->book_name }}</th>
                                     <th>{{ $book->book_type }}</th>
-                                    
                                     <th>
                                     <a href="#" class="btn btn-outline-warning"> Edit</a>
                                     </th>

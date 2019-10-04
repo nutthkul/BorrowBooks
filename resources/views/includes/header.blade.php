@@ -12,23 +12,28 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Borrow <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Manage Books <span class="sr-only">(current)</span></a>
-            </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+                    Borrow
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{ route('borrow.create') }}">Borrow Book</a>
+                <a class="dropdown-item" href="{{ route('borrow.edit') }}">Return Book</a>
+
+            </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Manage Books
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Create Book</a>
+                <a class="dropdown-item" href="#">Modify Borrow</a>
+                {{-- <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                </div> --}}
             </li>
         </ul>
 
