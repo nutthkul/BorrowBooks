@@ -17,6 +17,7 @@ Route::get('/default' , 'ReturnController@defaultPage')->name('default');
 
 Route::get('/' , 'BookController@index')->name('book.index');
 
+<<<<<<< HEAD
 
 #Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
 #Route::post('/add', 'BorrowController@borrower') -> name('add.borrow');
@@ -46,9 +47,12 @@ Route::name('return.')->group(function() {
 });
 
 // ###################### Book Route ##########################
+=======
+// ###################### Book Route #########################
+>>>>>>> #9-AddBook
 
 Route::name('book.')->group(function() {
-
+    Route::get('/book/index', 'BookController@index')->name('index');
     Route::get('/book/create', 'BookController@createIndex')->name('create.index');
     Route::post('/book/create', 'BookController@create')->name('create');
     Route::get('/book/edit/{id}', 'BookController@editIndex')->name('edit.index');
@@ -57,14 +61,22 @@ Route::name('book.')->group(function() {
 
 });
 
-// ###################### Manage Librarian Route ##########################
+// ###################### Borrow Route #########################
 
-Route::name('librarian.')->group(function() {
-    Route::get('/librarian/register', 'LibrarianController@regisPage')->name('regis.page');
-    Route::post('/librarian/register', 'LibrarianController@regis')->name('regis');
-    Route::get('/librarian/login', 'LibrarianController@loginPage')->name('login.page');
-    Route::post('/librarian/login', 'LibrarianController@login')->name('login');
-    Route::get('/librarian/logout', 'LibrarianController@logout')->name('logout');
-});
-
+<<<<<<< HEAD
 // ###################### XXXX Route ##########################
+=======
+Route::name('borrow.')->group(function() {
+
+    Route::get('/borrow/create', 'BorrowController@createIndex')->name('create.index');
+    Route::post('/borrow/create', 'BorrowController@create')->name('create');
+    Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
+    Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
+    Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
+
+});
+// ###################### Return Route ########################
+
+
+Route::get('/addborrow' , 'BorrowController@addBorrow') -> name('lib.add.borrow');
+>>>>>>> #9-AddBook
