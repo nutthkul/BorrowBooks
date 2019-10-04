@@ -22,3 +22,10 @@
 
 </body>
 </html>
+
+
+{{-- use in content page --}}
+{{-- @extends('layouts.default')
+@section('content')
+    i am the home page
+@stop --}}
