@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/default' , 'ReturnController@defaultPage')->name('default');
+
 // ##################### Dashboard Route ########################
 
 Route::get('/' , 'BookController@index')->name('book.index');
