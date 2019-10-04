@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/default' , 'ReturnController@defaultPage')->name('default');
+
+
 Route::get('/dashboard', function () {
 
 });

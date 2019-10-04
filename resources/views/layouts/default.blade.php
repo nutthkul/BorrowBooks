@@ -4,22 +4,21 @@
     @include('includes.head')
 </head>
 <body>
-<div class="container">
-
-    <header class="row">
+    <header>
         @include('includes.header')
     </header>
+{{-- #####################Content###################### --}}
+    <div class="container">
+        <div id="main" class="row">
 
-    <div id="main" class="row">
+                @yield('content')
 
-            @yield('content')
-
+        </div>
     </div>
-
-    <footer class="row">
+{{-- ################################################# --}}
+    <footer>
         @include('includes.footer')
     </footer>
 
-</div>
 </body>
 </html>
