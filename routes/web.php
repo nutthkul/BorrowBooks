@@ -13,7 +13,7 @@
 
 // ##################### Dashboard Route ########################
 
-Route::get('/' , 'BookController@index') -> name('book.index');
+Route::get('/' , 'BookController@index')->name('book.index');
 
 // ###################### Borrow Route #########################
 
@@ -28,7 +28,13 @@ Route::name('borrow.')->group(function() {
 });
 // ###################### Return Route ########################
 
-Route::get('/return' , 'ReturnController@returnBookPage') -> name('return.page');
+
+Route::name('return.')->group(function() {
+
+    Route::get('/return/edit/{id}' , 'ReturnController@editIndex')->name('edit.index');
+    Route::post('/return/edit', 'ReturnController@edit')->name('edit');
+
+});
 
 
 // ###################### Book Route ##########################
