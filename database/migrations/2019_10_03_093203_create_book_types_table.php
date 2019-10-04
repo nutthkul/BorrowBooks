@@ -16,6 +16,10 @@ class CreateBookTypesTable extends Migration
         Schema::create('book_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            
+            $table->string('type_name');
+            $table->string('type_id');
+            
         });
     }
 
