@@ -30,7 +30,7 @@ Route::name('borrow.')->group(function() {
 });
 
 Route::get('/som', function() {
-    dd('Som');
+    return ('index');
 }) -> name('test');
 
 // ###################### Return Route ########################
