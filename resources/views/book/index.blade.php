@@ -118,7 +118,7 @@
 
         <div class="col-10 offset-2" align="right">
                 <h1>
-                <a href="{{route('/book/create')}}" class="btn btn-outline-primary"> + Add Book </a>
+                <a href="{{route('.book.create')}}" class="btn btn-outline-primary"> + Add Book </a>
                 </h1>
             </div>
            

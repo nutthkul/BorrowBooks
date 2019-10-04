@@ -16,10 +16,10 @@ class BookController extends Controller
     {
         return view('book.create');
     }
-    public function add()
+    public function create(Request $request)
     {
+        // dd($request->all());
         $book = new Book();
-        $book->book_id = $request->book_id;
         $book->book_name = $request->book_name;
         $book->book_type = $request->book_type;
         $book->qty = $request->qty;

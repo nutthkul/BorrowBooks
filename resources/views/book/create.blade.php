@@ -7,26 +7,27 @@
     </div >
         <div class="container">
         <form action="{{route('book.create')}}" method="post">
+            @csrf
             <div class="form-group">
             <label for="book_name">Book name</label>
-                <input type="name" class="form-control" placeholder="input book name" id="book_name">
+                <input type="text" name="book_name" class="form-control" placeholder="input book name" id="book_name">
              </div>
             <div class="form-group">
                 <label for="book_name">Book type</label>
-                <select class="custom-select">
+                <select class="custom-select" name="book_type">
                         <option selected>Select type</option>
-                        <option value="1">BKP_01</option>
-                        <option value="2">mom and child</option>
-                        <option value="3">Fiction</option>
-                        <option value="4">study and learn</option>
-                        <option value="5">travel</option>
+                        <option>BKP_01</option>
+                        <option>mom and child</option>
+                        <option>Fiction</option>
+                        <option>study and learn</option>
+                        <option>travel</option>
                 </select>
             </div>
             <div class="form-group">
             <label for="qty">Quantity</label>
-                <input type="name" class="form-control" placeholder="input quantity" id="qty">
+                <input type="" class="form-control" placeholder="input quantity" id="qty" name="qty">
              </div>
-             <button type="button" class="btn btn-success btn-md">Save</button>
+             <button type="submit" class="btn btn-success btn-md">Save</button>
         </form>
         
     </div>

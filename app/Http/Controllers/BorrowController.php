@@ -7,13 +7,8 @@ use DateTime;
 
 class BorrowController extends Controller
 {
-<<<<<<< HEAD
-    public function addBorrow() {
-        dd(1);
-=======
     public function createIndex() {
         return view('borrow.borrowpage');
->>>>>>> addFileMigrations
     }
 
     public function create(Request $request) 
