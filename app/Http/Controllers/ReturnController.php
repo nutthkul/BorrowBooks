@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Borrow;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,4 +33,11 @@ class ReturnController extends Controller
         return redirect()->route('book.index');
     }
 
+=======
+use Illuminate\Http\Request;
+
+class ReturnController extends Controller
+{
+    //
+>>>>>>> addFileMigrations
 }
