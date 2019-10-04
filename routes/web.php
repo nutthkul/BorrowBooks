@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 // ##################### Dashboard Route ########################
 
 Route::get('/' , 'BookController@index')->name('book.index');
@@ -25,6 +26,10 @@ Route::name('borrow.')->group(function() {
     Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
     Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
     Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
+=======
+
+Route::get('/dashboard', function () {
+>>>>>>> #17-CreateIncludes
 
 });
 
