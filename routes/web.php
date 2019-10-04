@@ -11,23 +11,7 @@
 |
 */
 
-<<<<<<< HEAD
-// ##################### Dashboard Route ########################
-
-Route::get('/' , 'BookController@index')->name('book.index');
-
-// ###################### Borrow Route #########################
-
-Route::name('borrow.')->group(function() {
-
-    Route::get('/borrow/create', 'BorrowController@createIndex')->name('create.index');
-    Route::post('/borrow/create', 'BorrowController@create')->name('create');
-    Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
-    Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
-    Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
-=======
 Route::get('/dashboard', function () {
->>>>>>> Version1
 
 });
 // ###################### Return Route ########################
