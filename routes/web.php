@@ -19,11 +19,11 @@ Route::get('/' , 'BookController@index') -> name('book.index');
 
 Route::name('borrow.')->group(function() {
 
-    Route::get('/create', 'BorrowController@createIndex')->name('borrow.create.index');
-    Route::post('/create', 'BorrowController@create')->name('borrow.create');
-    Route::get('/edit/{id}', 'BorrowController@editIndex')->name('borrow.edit.index');
-    Route::post('/edit', 'BorrowController@edit')->name('borrow.edit');
-    Route::get('/delete/{id}', 'BorrowController@deleteIndex')->name('borrow.delete.index');
+    Route::get('/borrow/create', 'BorrowController@createIndex')->name('create.index');
+    Route::post('/borrow/create', 'BorrowController@create')->name('create');
+    Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
+    Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
+    Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
 
 });
 // ###################### Return Route ########################
@@ -35,22 +35,22 @@ Route::get('/return' , 'ReturnController@returnBookPage') -> name('return.page')
 
 Route::name('book.')->group(function() {
 
-    Route::get('/create', 'BookController@createIndex')->name('book.create.index');
-    Route::post('/create', 'BookController@create')->name('book.create');
-    Route::get('/edit/{id}', 'BookController@editIndex')->name('book.edit.index');
-    Route::post('/edit', 'BookController@edit')->name('book.edit');
-    Route::get('/delete/{id}', 'BookController@deleteIndex')->name('book.delete.index');
+    Route::get('/book/create', 'BookController@createIndex')->name('create.index');
+    Route::post('/book/create', 'BookController@create')->name('create');
+    Route::get('/book/edit/{id}', 'BookController@editIndex')->name('edit.index');
+    Route::post('/book/edit', 'BookController@edit')->name('edit');
+    Route::get('/book/delete/{id}', 'BookController@deleteIndex')->name('delete.index');
 
 });
 
 // ###################### Manage Librarian Route ##########################
 
 Route::name('librarian.')->group(function() {
-    Route::get('/register', 'LibrarianController@regisPage')->name('lib.regis.page');
-    Route::post('/register', 'LibrarianController@regis')->name('lib.regis');
-    Route::get('/login', 'LibrarianController@loginPage')->name('lib.login.page');
-    Route::post('/login', 'LibrarianController@login')->name('lib.login');
-    Route::get('/logout', 'LibrarianController@logout')->name('lib.logout');
+    Route::get('/librarian/register', 'LibrarianController@regisPage')->name('regis.page');
+    Route::post('/librarian/register', 'LibrarianController@regis')->name('regis');
+    Route::get('/librarian/login', 'LibrarianController@loginPage')->name('login.page');
+    Route::post('/librarian/login', 'LibrarianController@login')->name('login');
+    Route::get('/librarian/logout', 'LibrarianController@logout')->name('logout');
 });
 
 // ###################### XXXX Route ##########################
