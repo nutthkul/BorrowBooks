@@ -25,6 +25,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
 =======
 // ##################### Dashboard Route ########################
@@ -78,3 +79,9 @@ Route::name('librarian.')->group(function() {
 // ###################### XXXX Route ##########################
 
 >>>>>>> #13-CreateDefaultRoute
+=======
+Route::get('/test', function () {
+    dd(1);
+    return view('welcome');
+});
+>>>>>>> #9-AddBook
