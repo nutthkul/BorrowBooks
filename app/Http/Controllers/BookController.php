@@ -22,7 +22,6 @@ class BookController extends Controller
         $book = new Book();
         $book->book_name = $request->book_name;
         $book->book_type = $request->book_type;
-        $book->qty = $request->qty;
         $book->save();
     }
 }
