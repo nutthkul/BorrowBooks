@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Auth;
 
 class ReturnController extends Controller
 {
+
+    public function defaultPage()
+    {
+        // dd($id);
+        return view('layouts.default');
+    }
+
     public function editIndex($id)
     {
         // dd($id);

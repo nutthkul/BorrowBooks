@@ -11,6 +11,7 @@
 |
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ##################### Dashboard Route ########################
 
 Route::get('/' , 'BookController@index')->name('book.index');
@@ -30,6 +31,24 @@ Route::name('borrow.')->group(function() {
 
 Route::get('/dashboard', function () {
 >>>>>>> #17-CreateIncludes
+=======
+
+Route::get('/default' , 'ReturnController@defaultPage')->name('default');
+
+// ##################### Dashboard Route ########################
+
+Route::get('/' , 'BookController@index')->name('book.index');
+
+// ###################### Borrow Route #########################
+
+Route::name('borrow.')->group(function() {
+
+    Route::get('/borrow/create', 'BorrowController@createIndex')->name('create.index');
+    Route::post('/borrow/create', 'BorrowController@create')->name('create');
+    Route::get('/borrow/edit/{id}', 'BorrowController@editIndex')->name('edit.index');
+    Route::post('/borrow/edit', 'BorrowController@edit')->name('edit');
+    Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
+>>>>>>> #16-CreateLayouts
 
 });
 
@@ -46,7 +65,6 @@ Route::name('return.')->group(function() {
     Route::post('/return/edit', 'ReturnController@edit')->name('edit');
 
 });
-
 
 // ###################### Book Route ##########################
 
@@ -73,6 +91,7 @@ Route::name('librarian.')->group(function() {
 // ###################### XXXX Route ##########################
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 Route::get('/test', function () {
     dd(1);
@@ -81,3 +100,5 @@ Route::get('/test', function () {
 
 =======
 >>>>>>> addFileMigrations
+=======
+>>>>>>> #16-CreateLayouts
