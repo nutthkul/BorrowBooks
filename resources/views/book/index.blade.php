@@ -141,10 +141,10 @@
                                     <th>{{ $book->book_name }}</th>
                                     <th>{{ $book->book_type }}</th>
                                     <th>
-                                    <a href="#" class="btn btn-outline-warning"> Edit</a>
+                                    <a href="/book/edit/{{$book->id}}" class="btn btn-outline-warning"> Edit</a>
                                     </th>
                                     <th>
-                                    <a href="#" class="btn btn-outline-danger"> Delete</a>
+                                    <a href="/book/delete/{{$book->id}}" class="btn btn-outline-danger"> Delete</a>
                                     </th>
                                 </tr>
                                     

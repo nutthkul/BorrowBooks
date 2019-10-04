@@ -6,7 +6,7 @@
       <h1>Add new book</h1>
     </div >
         <div class="container">
-        <form action="{{route('book.index')}}" method="post">
+        <form action="{{route('book.create')}}" method="post">
             @csrf
             <div class="form-group">
             <label for="book_name">Book name</label>

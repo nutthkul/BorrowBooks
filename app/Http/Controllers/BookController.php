@@ -22,7 +22,28 @@ class BookController extends Controller
         $book = new Book();
         $book->book_name = $request->book_name;
         $book->book_type = $request->book_type;
-        $book->qty = $request->qty;
         $book->save();
+        return redirect()->route('book.index');
+    }
+    public function editIndex(Book $id)
+    {
+        return view('book.edit', ['book' => $id]);
+    }
+    public function edit(Request $request)
+    {
+        
+        $book = Book::find($request->id);
+        
+        $book->book_name = $request->book_name;
+        $book->book_type = $request->book_type;
+        
+        $book->save();
+        return redirect()->route('book.index');
+    }
+
+    public function deleteIndex(Book $id)
+    {
+        $id->delete();
+        return redirect()->route('book.index');
     }
 }
