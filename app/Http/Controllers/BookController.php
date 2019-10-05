@@ -4,17 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Borrow;
 
 class BookController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
+        $borrow = Borrow::all();
+        // dd(sizeof($borrow->toArray()));
+        return view('borrow.index',compact('borrow'));
+        
+=======
         $books = Book::all();
         return view('book.index',compact('books'));
     }
     public function createIndex()
     {
         return view('book.create');
+>>>>>>> master
     }
     public function create(Request $request)
     {

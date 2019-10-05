@@ -11,15 +11,11 @@
 |
 */
 
-Route::get('/default' , 'ReturnController@defaultPage')->name('default');
-
 // ##################### Dashboard Route ########################
 
 Route::get('/' , 'BookController@index')->name('book.index');
 
-
-#Route::get('/addborrow' , 'BorrowController@borrowPage') -> name('add.borrow.page');
-#Route::post('/add', 'BorrowController@borrower') -> name('add.borrow');
+// ###################### Borrow Route #########################
 
 Route::name('borrow.')->group(function() {
 
@@ -30,11 +26,14 @@ Route::name('borrow.')->group(function() {
     Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
 
 });
+<<<<<<< HEAD
+=======
 
 Route::get('/som', function() {
     return ('index');
 }) -> name('test');
 
+>>>>>>> master
 // ###################### Return Route ########################
 
 
@@ -60,3 +59,4 @@ Route::name('book.')->group(function() {
 // ###################### Borrow Route #########################
 
 // ###################### XXXX Route ##########################
+

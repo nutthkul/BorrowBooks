@@ -24,13 +24,28 @@ class BorrowController extends Controller
         $borrowBook->return_date =  $return_date_format;
         $borrowBook->lib_id = $request->lib_id;
         $borrowBook->borrower_id = $request->student_id;
+        $borrowBook->book_id = $request->book_id;
         $borrowBook->status = 1;
 
   
         if(!$borrowBook->save()){
             return redirect()->route('borrow.create.index');
         }
-        return redirect()->route('test');
+        return redirect()->route('book.index');
+    }
+
+    public function editIndex(Borrow $id)
+    {
+        return view('borrow.editborrowpage', ['borrow' => $id]);
+
+    }
+
+    public function deleteIndex(Request $request)
+    {
+        $borrow = Borrow::find($request->id);
+        $borrow->status = 2;
+        $borrow->save();
+        return redirect()->route('book.index');
     }
 
     public function editIndex(Borrow $id)
