@@ -26,6 +26,14 @@ Route::name('borrow.')->group(function() {
     Route::get('/borrow/delete/{id}', 'BorrowController@deleteIndex')->name('delete.index');
 
 });
+<<<<<<< HEAD
+=======
+
+Route::get('/som', function() {
+    return ('index');
+}) -> name('test');
+
+>>>>>>> master
 // ###################### Return Route ########################
 
 
@@ -39,7 +47,7 @@ Route::name('return.')->group(function() {
 // ###################### Book Route ##########################
 
 Route::name('book.')->group(function() {
-
+    Route::get('/book/index', 'BookController@index')->name('index');
     Route::get('/book/create', 'BookController@createIndex')->name('create.index');
     Route::post('/book/create', 'BookController@create')->name('create');
     Route::get('/book/edit/{id}', 'BookController@editIndex')->name('edit.index');
@@ -48,15 +56,7 @@ Route::name('book.')->group(function() {
 
 });
 
-// ###################### Manage Librarian Route ##########################
-
-Route::name('librarian.')->group(function() {
-    Route::get('/librarian/register', 'LibrarianController@regisPage')->name('regis.page');
-    Route::post('/librarian/register', 'LibrarianController@regis')->name('regis');
-    Route::get('/librarian/login', 'LibrarianController@loginPage')->name('login.page');
-    Route::post('/librarian/login', 'LibrarianController@login')->name('login');
-    Route::get('/librarian/logout', 'LibrarianController@logout')->name('logout');
-});
+// ###################### Borrow Route #########################
 
 // ###################### XXXX Route ##########################
 

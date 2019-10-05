@@ -11,5 +11,6 @@ class Book extends Model
     protected $fillable = [
         'book_name',
         'book_type',
+        'qty',
     ];
 }

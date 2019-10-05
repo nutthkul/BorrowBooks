@@ -47,4 +47,18 @@ class BorrowController extends Controller
         $borrow->save();
         return redirect()->route('book.index');
     }
+
+    public function editIndex(Borrow $id)
+    {
+        return view('borrow.editborrowpage', ['borrow' => $id]);
+
+    }
+
+    public function deleteIndex(Request $request)
+    {
+        $borrow = Borrow::find($request->id);
+        $borrow->status = 2;
+        $borrow->save();
+        return redirect()->route('test');
+    }
 }
